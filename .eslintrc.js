@@ -6,12 +6,17 @@ module.exports = {
     es6: true
   },
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: '@typescript-eslint/parser',
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  extends: ['plugin:react/recommended', 'plugin:prettier/recommended'],
-  plugins: [],
+  extends: [
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended'
+  ],
+  plugins: ['@typescript-eslint'],
   // add your custom rules here
   rules: {
     'react/prop-types': 1,
