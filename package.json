@@ -21,7 +21,11 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "lint:check": "eslint \"./src/**/*.{js,jsx,ts,tsx,json,md}\"",
+    "lint:fix": "eslint \"./src/**/*.{js,jsx,ts,tsx,json,md}\" --fix",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -43,7 +47,27 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
     "postcss": "^7.0.36",
+    "prettier": "^2.3.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "eslint --fix"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
   }
 }
