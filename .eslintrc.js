@@ -19,7 +19,7 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   // add your custom rules here
   rules: {
-    'react/prop-types': 1,
+    'react/prop-types': 0,
     'react/react-in-jsx-scope': 0
   },
   settings: {

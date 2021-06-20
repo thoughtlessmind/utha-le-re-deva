@@ -1,0 +1,41 @@
+.btnWrapper {
+  @mixin arrowSlideAnimation() {
+    animation: slide 2s infinite;
+    @keyframes slide {
+      0% {
+        transform: translateY(0%);
+      }
+      50% {
+        transform: translateY(70%);
+      }
+      51% {
+        transform: translateY(-70%);
+      }
+      100% {
+        transform: translateY(0%);
+      }
+    }
+  }
+  @apply w-12 h-12 rounded-full shadow-md bg-white overflow-hidden;
+
+  span {
+    @apply flex items-center justify-center h-full w-full;
+
+    svg {
+      @apply w-2/4 h-2/4;
+      fill: rgb(99, 2, 2);
+    }
+  }
+
+  &[data-active='true'] {
+    @apply bg-red-200 shadow-inner;
+
+    span {
+      @include arrowSlideAnimation();
+
+      svg {
+        fill: rgb(216, 4, 4);
+      }
+    }
+  }
+}

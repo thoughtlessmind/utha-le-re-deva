@@ -1,16 +1,12 @@
 import { FC } from 'react'
-import PropTypes from 'prop-types'
+import Floors from 'components/Floors'
 
-const MainContentWrapper: FC = (props) => {
+const MainContentWrapper: FC = () => {
   return (
-    <div className="p-4 md:p-8 h-contentcontainer bg-red-200">
-      {props.children}
+    <div className="p-4 md:p-8 h-contentcontainer bg-gray-300">
+      <Floors />
     </div>
   )
-}
-
-MainContentWrapper.propTypes = {
-  children: PropTypes.node
 }
 
 export default MainContentWrapper

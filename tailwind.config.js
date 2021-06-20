@@ -9,7 +9,8 @@ module.exports = {
       },
       colors: {
         primary: {
-          main: 'var(--primary-main)'
+          DEFAULT: 'var(--primary-main)',
+          light: 'var(--primary-main-light)'
         }
       },
       spacing: {
