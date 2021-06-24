@@ -4,7 +4,7 @@ import initialState, { InitialState } from './state'
 const appReducer = (state = initialState, action: Actions): InitialState => {
   switch (action.type) {
     case ActionType.Test:
-      return { ...state, test: 'Changed data' }
+      return { ...state }
 
     default:
       return { ...state }

@@ -1,21 +1,31 @@
+import { AppContext } from 'contexts'
 import { LiftButton, Button } from 'GlobalComponents'
+import { useContext } from 'react'
+import { Floor as FloorType } from 'types'
 import styles from './floor.module.scss'
 
 type FloorProps = {
-  floorName: string
-  clickedUp: boolean
-  clickedDown: boolean
+  floorData: FloorType
 }
 
 const Floor = (props: FloorProps): JSX.Element => {
-  const { floorName, clickedDown, clickedUp } = props
+  const { floorData } = props
+
+  const {
+    state: { totalFloors }
+  } = useContext(AppContext)
+
   return (
     <div className={styles.floorContainer}>
       <div className={styles.controleArea}>
-        <p className={styles.floorName}>{floorName}</p>
+        <p className={styles.floorName}>{floorData.name}</p>
         <div className="flex items-center gap-6 my-auto pt-4">
-          <LiftButton btnType="up" pressed={clickedUp} />
-          <LiftButton btnType="down" pressed={clickedDown} />
+          {totalFloors !== floorData.floorNumber + 1 && (
+            <LiftButton btnType="up" pressed={floorData.clickedpUp} />
+          )}
+          {floorData.floorNumber !== 0 && (
+            <LiftButton btnType="down" pressed={floorData.clickedDown} />
+          )}
         </div>
       </div>
     </div>
