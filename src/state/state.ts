@@ -12,14 +12,14 @@ const initialState: InitialState = {
       floorNumber: 2,
       isOpen: true,
       clickedpUp: false,
-      clickedDown: true
+      clickedDown: false
     },
     {
       name: 'Floor 1',
       floorNumber: 1,
       isOpen: true,
       clickedpUp: false,
-      clickedDown: true
+      clickedDown: false
     },
     {
       name: 'Ground',
