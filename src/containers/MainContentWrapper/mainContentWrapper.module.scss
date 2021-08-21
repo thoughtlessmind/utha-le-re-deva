@@ -1,0 +1,4 @@
+.container {
+  min-height: calc(100vh - var(--header-height));
+  @apply p-4 md:p-8 bg-gray-300;
+}

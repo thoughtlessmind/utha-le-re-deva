@@ -1,9 +1,10 @@
 import { FC } from 'react'
 import Floors from 'components/Floors'
+import styles from './mainContentWrapper.module.scss'
 
 const MainContentWrapper: FC = () => {
   return (
-    <div className="p-4 md:p-8 h-contentcontainer bg-gray-300">
+    <div className={styles.container}>
       <Floors />
     </div>
   )

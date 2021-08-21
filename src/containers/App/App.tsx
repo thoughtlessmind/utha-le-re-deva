@@ -6,12 +6,8 @@ import { AppContextProvider } from 'contexts'
 const App: FC = () => {
   return (
     <AppContextProvider>
-      <div>
-        <Header />
-        <div className="pt-header">
-          <MainContentWrapper />
-        </div>
-      </div>
+      <Header />
+      <MainContentWrapper />
     </AppContextProvider>
   )
 }
