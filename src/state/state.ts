@@ -1,5 +1,5 @@
 import { Floor } from 'types'
-
+import { v4 as uuidv4 } from 'uuid'
 export interface InitialState {
   floors: Floor[]
   totalFloors: number
@@ -8,25 +8,25 @@ export interface InitialState {
 const initialState: InitialState = {
   floors: [
     {
-      name: 'Floor 2',
-      floorNumber: 2,
       isOpen: true,
       clickedpUp: false,
-      clickedDown: false
+      clickedDown: false,
+      id: uuidv4(),
+      floorNumber: 2
     },
     {
-      name: 'Floor 1',
-      floorNumber: 1,
       isOpen: true,
       clickedpUp: false,
-      clickedDown: false
+      clickedDown: false,
+      id: uuidv4(),
+      floorNumber: 1
     },
     {
-      name: 'Ground',
-      floorNumber: 0,
       isOpen: true,
       clickedpUp: false,
-      clickedDown: false
+      clickedDown: false,
+      id: uuidv4(),
+      floorNumber: 0
     }
   ],
   totalFloors: 3

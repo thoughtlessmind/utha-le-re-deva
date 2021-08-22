@@ -10,7 +10,7 @@ const Floors: FC = () => {
   return (
     <div className="">
       {floors.map((floor) => (
-        <Floor floorData={floor} key={floor.name} />
+        <Floor floorData={floor} key={floor.id} />
       ))}
     </div>
   )

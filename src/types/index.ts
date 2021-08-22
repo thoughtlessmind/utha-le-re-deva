@@ -1,7 +1,7 @@
 export interface Floor {
-  name: string
   isOpen: boolean
   clickedpUp: boolean
   clickedDown: boolean
+  id: string
   floorNumber: number
 }

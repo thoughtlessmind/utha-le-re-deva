@@ -1,7 +1,8 @@
 export enum ActionType {
   Test = 'TEST',
   Log = 'LOG',
-  AddFloor = 'ADD_FLOOR'
+  AddFloor = 'ADD_FLOOR',
+  RemoveFloor = 'REMOVE_FLOOR'
 }
 
 export interface Test {
@@ -17,4 +18,9 @@ export interface AddFloor {
   type: ActionType.AddFloor
 }
 
-export type Actions = Test | Log | AddFloor
+export interface RemoveFloor {
+  type: ActionType.RemoveFloor
+  payload: string
+}
+
+export type Actions = Test | Log | AddFloor | RemoveFloor

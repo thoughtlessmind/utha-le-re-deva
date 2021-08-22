@@ -1,5 +1,5 @@
 .floorContainer {
-  @apply py-4 box-border grid grid-cols-9;
+  @apply py-4 box-border grid grid-cols-9 relative;
   height: var(--floor-height);
   border-bottom: 2px solid gray;
 
@@ -9,5 +9,13 @@
     .floorName {
       @apply font-medium text-lg;
     }
+  }
+
+  .removeFloorbuttons {
+    @apply absolute top-5 right-5 hidden;
+  }
+
+  &:hover .removeFloorbuttons {
+    @apply block;
   }
 }
