@@ -1,14 +1,7 @@
-import { Floor } from 'types'
-import {
-  Actions,
-  ActionType,
-  AddFloor,
-  Log,
-  RemoveFloor,
-  Test
-} from './actions'
-import initialState, { InitialState } from './state'
 import { v4 as uuidv4 } from 'uuid'
+import { Floor } from 'types'
+import { Actions, ActionType, AddFloor, RemoveFloor } from './actions'
+import initialState, { InitialState } from './state'
 
 const appReducer = (state = initialState, action: Actions): InitialState => {
   switch (action.type) {
@@ -54,15 +47,6 @@ const removeOneFloor = (floorId: string, floorsData: Floor[]): Floor[] => {
     .map((floor) => ({ ...floor, floorNumber: floor.floorNumber - 1 }))
   return [...adjustingArr, ...stableArr]
 }
-
-export const test = (): Test => ({
-  type: ActionType.Test
-})
-
-export const log = (num: number): Log => ({
-  type: ActionType.Log,
-  payload: num
-})
 
 export const addNewFloor = (): AddFloor => ({
   type: ActionType.AddFloor

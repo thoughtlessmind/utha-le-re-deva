@@ -1,5 +1,5 @@
 import { AppContext } from 'contexts'
-import { LiftButton, Button } from 'GlobalComponents'
+import { LiftButton } from 'GlobalComponents'
 import { useContext } from 'react'
 import { removeFloor } from 'state/reducer'
 import { Floor as FloorType } from 'types'

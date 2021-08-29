@@ -1,10 +1,10 @@
 .floorContainer {
-  @apply py-4 box-border grid grid-cols-9 relative;
+  @apply py-4 box-border relative;
   height: var(--floor-height);
   border-bottom: 2px solid gray;
 
   .controleArea {
-    @apply col-span-2;
+    @apply w-36;
 
     .floorName {
       @apply font-medium text-lg;

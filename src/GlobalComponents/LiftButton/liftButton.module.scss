@@ -1,5 +1,5 @@
 .btnWrapper {
-  @mixin arrowSlideAnimation() {
+  @mixin arrowSlideDownAnimation() {
     animation: slide 2s infinite;
     @keyframes slide {
       0% {
@@ -16,6 +16,7 @@
       }
     }
   }
+
   @apply w-12 h-12 rounded-full shadow-md bg-white overflow-hidden;
 
   span {
@@ -27,11 +28,15 @@
     }
   }
 
+  &[data-direction='up'] {
+    transform: rotate(180deg);
+  }
+
   &[data-active='true'] {
     @apply bg-red-200 shadow-inner;
 
     span {
-      @include arrowSlideAnimation();
+      @include arrowSlideDownAnimation();
 
       svg {
         fill: rgb(216, 4, 4);
