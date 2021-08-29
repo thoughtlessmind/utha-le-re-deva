@@ -15,9 +15,9 @@ const Floors: FC = () => {
         <Floor floorData={floor} key={floor.id} />
       ))}
       <div className={styles.allLiftsContainer}>
-        <div className="relative h-full w-full">
-          {liftStatus.map((lift) => (
-            <Lift key={lift.id} />
+        <div className="relative h-full w-full flex justify-center items-end gap-6">
+          {liftStatus.map((lift, index) => (
+            <Lift liftIndex={index} liftStatus={lift} key={lift.id} />
           ))}
         </div>
       </div>

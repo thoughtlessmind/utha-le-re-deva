@@ -1,7 +1,7 @@
 .liftContainer {
-  position: absolute;
-  bottom: 0;
-  height: 80px;
-  width: 30px;
+  height: var(--lift-height);
+  width: calc(var(--lift-height) * 0.6);
+  min-width: 40px;
+  max-width: 80px;
   border: 1px solid gray;
 }

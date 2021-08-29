@@ -47,7 +47,7 @@ const initialState: InitialState = {
     },
     {
       id: uuidv4(),
-      currentFloor: 0,
+      currentFloor: 2,
       isActive: true
     }
   ]
